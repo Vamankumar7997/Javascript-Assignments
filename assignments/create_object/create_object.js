@@ -1,13 +1,13 @@
 function CreateObject(arr) {
-    let values = {}
-    let res = 0
-    while (res < arr.length) {
-        let ans = arr[res]
-        let obj = arr[res + 1]
-        values[ans] = obj
-        res = res + 2
-    }
-    return values
+    let obj = {}
+    
+    for (let i=0;i<arr.length;i+=2) {
+        let key = arr[i]
+        let value = arr[i+1]
+        obj[key] = value
+    }  
+    return obj
+        
     // Write your code here
 }
 
